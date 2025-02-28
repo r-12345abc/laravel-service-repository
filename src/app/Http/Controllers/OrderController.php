@@ -28,7 +28,8 @@ class OrderController extends Controller
                 $request->items
             );
 
-            return view('front.order.complete', compact('order'));
+            return redirect()->route('');
+            // return view('front.order.complete', compact('order'));
         } catch (Exception $e) {
             // TODO ログ出力
             abort(500);
